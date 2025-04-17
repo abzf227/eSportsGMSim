@@ -2,15 +2,20 @@ using System;
 using System.Collections.Generic;
 
 public class Player {
+    //tools
+    GaussianRandom rand = new GaussianRandom();
+
     //general reference stuff
     private string inGameName;
     private string realName;
     private uint age;
     private string nationality; //isn't important BUT determintes language which is very important
-    private List<PlayerLanguage> languages = new List<PlayerLanguage>; //generally 1 but can be 2 and sometimes 3
+    private List<PlayerLanguage> languages = new List<PlayerLanguage>; //generally 1 but can be 2 and sometimes 3....affects comms heavily
 
     //actually important stuff (well age is important too because it has a factor in a lot of things)...similar to nba2k, has a rating out of 100 + a final OVR
-    private uint mechanics;  //bread and butter, basically the most important stat
+    private uint mechanics;  //bread and butter, basically the most important stat...affects how much the bottom 2 improve
+    private uint sniping;    //awp
+    private unit rifling;    //ak
     private uint experience; //younger players = less experience
     private uint utility;
     private uint gameSense;
@@ -29,6 +34,14 @@ public class Player {
     private uint scoutedRating; //what im thinking should replace POT
 
 
+    //constructors
+    public Player() { //randomly generated player...real name will be pulled from TXT file i guess. idk if i can connect chatgpt to it...idk LOWKEY
+        //CONNECT LARGE DATABASE/OPENAI API FOR BELOW
+        inGameName = null; 
+        realName = null;
+        age = rand(23, 3);
 
+        mechanics = rand(50, 10);
 
+    }  
 }

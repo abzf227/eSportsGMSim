@@ -23,5 +23,4 @@ public class PlayerLanguage {
         this.pLang = pLang;
         this.fluency = fluency; //bilingual king/queen
     }
-
 }
