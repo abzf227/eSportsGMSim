@@ -42,6 +42,7 @@ public class Player {
         age = rand(23, 3);
 
         mechanics = rand(50, 10);
+        
 
     }  
 }
